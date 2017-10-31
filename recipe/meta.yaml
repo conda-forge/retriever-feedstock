@@ -30,6 +30,7 @@ requirements:
     - psycopg2
     - pytest
     - pymysql
+
 test:
   imports:
     - retriever
