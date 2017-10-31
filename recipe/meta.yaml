@@ -1,6 +1,6 @@
 {% set name = "retriever" %}
-{% set version = "2.0.0" %}
-{% set sha256 = "5c82f7b11a0c1825876e1e7463e456dc7990e8d1f93af7d4f641f9108b31e6ff" %}
+{% set version = "2.1.0" %}
+{% set sha256 = "a1f3c9a50369246fab6faa9915981e5b85e57745c52c6277ff5a2eab24cd2483" %}
 
 package:
   name: {{ name }}
@@ -20,22 +20,22 @@ requirements:
   build:
     - python
     - setuptools
-    - xlrd
-    - future
+    - numpydoc
   run:
     - python
     - setuptools
     - xlrd
     - future
+    - argcomplete
+    - psycopg2
+    - pytest
+    - pymysql
 
 test:
   imports:
     - retriever
     - retriever.engines
     - retriever.lib
-
-  commands:
-    - retriever --help
 
 about:
   home: https://github.com/weecology/retriever
@@ -47,3 +47,4 @@ extra:
   recipe-maintainers:
     - Henrykironde
     - ethanwhite
+    - zhangcandrew
