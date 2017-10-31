@@ -14,26 +14,22 @@ build:
   entry_points:
     - retriever = retriever.__main__:main
   number: 0
-  script: 
-    - python setup.py install --single-version-externally-managed --record=record.txt
+  script: python setup.py install --single-version-externally-managed --record record.txt
  
 requirements:
   build:
     - python
     - setuptools
-    - xlrd
-    - future
-    - argcomplete
     - numpydoc
-    - psycopg2
-    - pytest
-    - pymysql
   run:
     - python
     - setuptools
     - xlrd
     - future
-
+    - argcomplete
+    - psycopg2
+    - pytest
+    - pymysql
 test:
   imports:
     - retriever
