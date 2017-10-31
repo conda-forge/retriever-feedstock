@@ -24,11 +24,8 @@ requirements:
     - xlrd
     - future
     - argcomplete
-    - PyMySQL
     - psycopg2
     - numpydoc
-    - sphinx_py3doc_enhanced_theme
-    - sphinxcontrib-napoleon
   run:
     - python
     - setuptools
