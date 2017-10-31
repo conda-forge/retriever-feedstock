@@ -14,14 +14,21 @@ build:
   entry_points:
     - retriever = retriever.__main__:main
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
-
+  script: 
+    - python setup.py install --single-version-externally-managed --record=record.txt
+ 
 requirements:
   build:
     - python
     - setuptools
     - xlrd
     - future
+    - argcomplete
+    - PyMySQL
+    - psycopg2
+    - numpydoc
+    - sphinx_py3doc_enhanced_theme
+    - sphinxcontrib-napoleon
   run:
     - python
     - setuptools
