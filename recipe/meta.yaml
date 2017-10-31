@@ -24,8 +24,9 @@ requirements:
     - xlrd
     - future
     - argcomplete
-    - psycopg2
     - numpydoc
+    - PyMySQL>=0.4
+    - psycopg2>=2.0
   run:
     - python
     - setuptools
@@ -37,9 +38,6 @@ test:
     - retriever
     - retriever.engines
     - retriever.lib
-
-  commands:
-    - retriever --help
 
 about:
   home: https://github.com/weecology/retriever
