@@ -27,6 +27,7 @@ requirements:
     - numpydoc
     - psycopg2
     - pytest
+    - pymysql
   run:
     - python
     - setuptools
