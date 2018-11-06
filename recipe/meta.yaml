@@ -1,6 +1,6 @@
 {% set name = "retriever" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "a1f3c9a50369246fab6faa9915981e5b85e57745c52c6277ff5a2eab24cd2483" %}
+{% set version = "2.2.0" %}
+{% set sha256 = "8b195f70b04e89e7e3b1423e165271339e8dcc712c7f6d38daebb294d978f0a1" %}
 
 package:
   name: {{ name }}
@@ -14,7 +14,7 @@ build:
   noarch: python
   entry_points:
     - retriever = retriever.__main__:main
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
