@@ -32,6 +32,7 @@ requirements:
     - psycopg2
     - pytest
     - pymysql
+    - requests
 
 test:
   imports:
