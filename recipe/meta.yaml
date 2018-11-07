@@ -33,6 +33,8 @@ requirements:
     - pytest
     - pymysql
     - requests
+    - tqdm
+    - pandas
 
 test:
   imports:
