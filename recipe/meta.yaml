@@ -42,6 +42,13 @@ test:
     - retriever.engines
     - retriever.lib
 
+  requires:
+    - pytest
+  commands:
+    - pytest -v -k "not postgres and not mysql and not spatial"
+  source_files:
+    - test/
+
 about:
   home: https://github.com/weecology/retriever
   license: MIT
