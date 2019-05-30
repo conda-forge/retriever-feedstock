@@ -20,16 +20,16 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.5
     - setuptools
     - numpydoc
   run:
-    - python
+    - python >=3.5
     - setuptools
     - xlrd
     - future
     - argcomplete
-    - psycopg2
+    - psycopg2-binary
     - pytest
     - pymysql
     - requests
@@ -47,6 +47,11 @@ about:
   license: MIT
   summary: 'Data Retriever'
   license_family: MIT
+  description: |
+    This module analyzes jpeg/jpeg2000/png/gif image header and
+    return image size.
+  dev_url: https://github.com/weecology/retriever
+  doc_url: https://retriever.readthedocs.io/en/latest/?badge=latest
 
 extra:
   recipe-maintainers:

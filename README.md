@@ -9,6 +9,8 @@ Feedstock license: BSD 3-Clause
 
 Summary: Data Retriever
 
+This module analyzes jpeg/jpeg2000/png/gif image header and
+return image size.
 
 
 Current build status
