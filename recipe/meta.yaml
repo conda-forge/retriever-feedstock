@@ -1,6 +1,6 @@
 {% set name = "retriever" %}
-{% set version = "2.2.0" %}
-{% set sha256 = "8b195f70b04e89e7e3b1423e165271339e8dcc712c7f6d38daebb294d978f0a1" %}
+{% set version = "2.3.0" %}
+{% set sha256 = "711c731feef837bc6aa08d209d86df35cd5486e6632e53ae0a2c41a1cb123de9" %}
 
 package:
   name: {{ name }}
@@ -15,21 +15,25 @@ build:
   entry_points:
     - retriever = retriever.__main__:main
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
-
+  script:
+    - echo 'The Data Retriever is a package manager for data. It downloads, cleans, and stores publicly available data, so that analysts spend less time cleaning and managing data, and more time analyzing it.' > "README.md"
+    - echo '' > "CHANGES.md"
+    - python -m pip install --no-deps --ignore-installed . 
+  always_include_files:
+    - README.md
+    - CHANGES.md
 requirements:
   host:
     - pip
-    - python
+    - python >=3.5
     - setuptools
     - numpydoc
   run:
-    - python
+    - python >=3.5
     - setuptools
     - xlrd
     - future
     - argcomplete
-    - psycopg2
     - pytest
     - pymysql
     - requests
@@ -42,11 +46,24 @@ test:
     - retriever.engines
     - retriever.lib
 
+  requires:
+    - pytest
+  commands:
+    - pytest -v -k "not postgres and not mysql and integration"
+  source_files:
+    - test/
+    - README.md
+
 about:
   home: https://github.com/weecology/retriever
   license: MIT
   summary: 'Data Retriever'
   license_family: MIT
+  description: |
+    This module analyzes jpeg/jpeg2000/png/gif image header and
+    return image size.
+  dev_url: https://github.com/weecology/retriever
+  doc_url: https://retriever.readthedocs.io/en/latest/?badge=latest
 
 extra:
   recipe-maintainers:
