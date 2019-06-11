@@ -1,6 +1,6 @@
 {% set name = "retriever" %}
-{% set version = "2.3.1" %}
-{% set sha256 = "b8a774a45db31e5ba4b693aabfa8c6ef958ea82187d5f97fd1d98d02da7ca540" %}
+{% set version = "2.4.0" %}
+{% set sha256 = "f59045647bca50036a5cef0bd6167b079c635295160ab29000a0694944e64837" %}
 
 package:
   name: {{ name }}
