@@ -1,10 +1,10 @@
 {% set name = "retriever" %}
-{% set version = "2.4.0" %}
-{% set sha256 = "f59045647bca50036a5cef0bd6167b079c635295160ab29000a0694944e64837" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "1425e13451b516b696ebf70df168814f5d3758fe59e75caa84561be8dc9ce926" %}
 
 package:
   name: {{ name }}
-  version: {{version}}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
@@ -57,8 +57,9 @@ test:
 about:
   home: https://github.com/weecology/retriever
   license: MIT
-  summary: 'Data Retriever'
   license_family: MIT
+  license_file: LICENSE
+  summary: Data Retriever
   description: |
     This module analyzes jpeg/jpeg2000/png/gif image header and
     return image size.
@@ -68,5 +69,3 @@ about:
 extra:
   recipe-maintainers:
     - Henrykironde
-    - ethanwhite
-    - zhangcandrew
