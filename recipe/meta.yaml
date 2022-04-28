@@ -19,7 +19,6 @@ build:
     - echo 'The Data Retriever is a package manager for data. It downloads, cleans, and stores publicly available data, so that analysts spend less time cleaning and managing data, and more time analyzing it.' > "README.md"
     - echo '' > "CHANGES.md"
     - python -m pip install --no-deps --ignore-installed .
-    - python -m pip install tables
   always_include_files:
     - README.md
     - CHANGES.md
@@ -29,7 +28,6 @@ requirements:
     - python >=3.5
     - setuptools
     - numpydoc
-    - tables
   run:
     - python >=3.5
     - setuptools
