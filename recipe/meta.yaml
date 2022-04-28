@@ -37,8 +37,18 @@ requirements:
     - pytest
     - pymysql
     - requests
-    - tqdm
+    - tqdm==4.30.0
     - pandas
+    - openpyxl
+    - kaggle
+    - psycopg2-binary
+    - numpy
+    - numpydoc
+    - tables
+    - h5py
+    - Pillow
+    - inquirer
+    - coverage
 
 test:
   imports:
