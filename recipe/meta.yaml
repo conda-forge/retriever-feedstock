@@ -37,7 +37,7 @@ requirements:
     - pytest
     - pymysql
     - requests
-    - tqdm==4.30.0
+    - tqdm ==4.30.0
     - pandas
     - openpyxl
     - kaggle
