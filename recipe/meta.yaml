@@ -14,7 +14,7 @@ build:
   noarch: python
   entry_points:
     - retriever = retriever.__main__:main
-  number: 1
+  number: 2
   script:
     - echo 'The Data Retriever is a package manager for data. It downloads, cleans, and stores publicly available data, so that analysts spend less time cleaning and managing data, and more time analyzing it.' > "README.md"
     - echo '' > "CHANGES.md"
@@ -42,9 +42,10 @@ requirements:
     - openpyxl
     - kaggle
     - psycopg2-binary
+    - {{ pin_compatible('numpy') }}
+    - {{ pin_compatible('tables') }}
     - numpy
     - numpydoc
-    - tables
     - h5py
     - Pillow
     - inquirer
