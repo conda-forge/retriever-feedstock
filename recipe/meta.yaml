@@ -14,7 +14,7 @@ build:
   noarch: python
   entry_points:
     - retriever = retriever.__main__:main
-  number: 3
+  number: 0
   script:
     - echo 'The Data Retriever is a package manager for data. It downloads, cleans, and stores publicly available data, so that analysts spend less time cleaning and managing data, and more time analyzing it.' > "README.md"
     - echo '' > "CHANGES.md"
