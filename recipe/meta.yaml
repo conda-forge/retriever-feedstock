@@ -7,14 +7,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   entry_points:
     - retriever = retriever.__main__:main
-  number: 0
+  number: 1
   script:
     - echo 'The Data Retriever is a package manager for data. It downloads, cleans, and stores publicly available data, so that analysts spend less time cleaning and managing data, and more time analyzing it.' > "README.md"
     - echo '' > "CHANGES.md"
@@ -25,11 +25,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
     - setuptools
     - numpydoc
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - setuptools
     - xlrd
     - future
@@ -58,6 +58,7 @@ test:
 
   requires:
     - pytest
+    - python {{ python_min }}
   commands:
     - pytest -v -k "not postgres and not mysql and integration"
   source_files:
